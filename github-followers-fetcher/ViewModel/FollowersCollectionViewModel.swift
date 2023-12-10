@@ -8,17 +8,27 @@
 import Foundation
 
 class FollowersCollectionViewModel {
-    var userProfileName: String?
-    var followers: [Follower] = []
+    var followerCells: [CollectionUIModel] = []
+    var filteredFollowerCells: [CollectionUIModel] = []
     
-    init(userProfileName: String?) {
-        self.userProfileName = userProfileName
+    init(userProfileName: String?, followers: [User]) {
+        self.followerCells = []
+        for follower in followers {
+            self.followerCells.append(CollectionUIModel(username: follower.username!, avatarURL: follower.avatarURL))
+        }
     }
     
-    func getFollowerList(username: String){
-        let followersList: [Follower] = []
-        //TODO: get from API
-        
-        followers = followersList
+    func filterFollowers(text: String){
+        filteredFollowerCells = []
+        if (text.isEmpty){
+            filteredFollowerCells = followerCells
+            return
+        }
+        for follower in followerCells {
+            let followerName = follower.username.lowercased()
+            if (followerName.contains(text)){
+                filteredFollowerCells.append(follower)
+            }
+        }
     }
 }

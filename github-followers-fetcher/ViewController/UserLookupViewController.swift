@@ -7,10 +7,10 @@
 
 import UIKit
 
-class UserLookupViewController: UIViewController, UITextFieldDelegate {
+class UserLookupViewController: UIViewController {
     
     //MARK: ViewModel Instance
-    private let viewModel = UserLookupViewModel.shared
+    private let viewModel = UserLookupViewModel()
     
     //MARK: Outlets
     @IBOutlet weak private var usernameTextfield: UITextField!
@@ -18,12 +18,16 @@ class UserLookupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak private var submitButton: UIButton!
     
     //MARK: On start
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameTextfield.delegate = self
+        setupTextfield()
+        submitButton.isEnabled = false
+    }
+    
+    private func setupTextfield() {
         setupTextfieldBorder()
         usernameTextfield.placeholder = viewModel.placeholderUsername
-        submitButton.isEnabled = false
     }
     
     //MARK: Functions
@@ -41,17 +45,6 @@ class UserLookupViewController: UIViewController, UITextFieldDelegate {
         }
         addPaddingToTextfield()
     }
-    func textField(_ usernameTextfield: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-          let currentText = usernameTextfield.text ?? ""
-          let updatedText = (currentText as NSString).replacingCharacters(in: range, with: string)
-        if (updatedText.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
-            submitButton.isEnabled = false
-        }
-        else {
-            submitButton.isEnabled = true
-        }
-          return true
-      }
     
     private func showAlert(_ error: String?) {
         let alert = UIAlertController(title: "Invalid Username!", message: error, preferredStyle: .alert)
@@ -59,19 +52,23 @@ class UserLookupViewController: UIViewController, UITextFieldDelegate {
         self.present(alert,animated: true)
     }
     
-    private func sendRequest() async {
-            await viewModel.connectToAPI(username: usernameTextfield.text!)
-            do {
-                loadingIndicator.startAnimating()
-               try await Task.sleep(nanoseconds: 1 * 1_000_000_000)
-                loadingIndicator.stopAnimating()
+    private func sendRequest() {
+        loadingIndicator.startAnimating()
+        viewModel.findUser(username: usernameTextfield.text!) { [weak self] errorMessage in
+            if let errorMessage = errorMessage{
+                DispatchQueue.main.async(execute: {
+                    self?.loadingIndicator.stopAnimating()
+                    self?.showAlert(errorMessage)
+                })
             }
-            catch{}
-            let errorMessage = viewModel.errorMessage
-            if (errorMessage != nil){
-                showAlert(errorMessage)
-                return
+            else {
+                self?.presentUserProfileViewController()
             }
+            DispatchQueue.main.async(execute: {
+                self?.submitButton.isEnabled = true
+                self?.loadingIndicator.stopAnimating()
+            })
+        }
     }
     
     //MARK: Segues
@@ -83,28 +80,28 @@ class UserLookupViewController: UIViewController, UITextFieldDelegate {
                 // Passing data to destination view model
                 destinationVC.viewModel = viewModel.userDetail
             }
-//            if let destinationVC = segue.destination as? UserProfileViewController {
-//                destinationVC.viewModel = viewModel.passData()
-//            }
         }
+    }
+    
+    func presentUserProfileViewController(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destination = storyboard.instantiateViewController(withIdentifier: "showDetail") as! UINavigationController
+        //accessing the top view controller of the UINavigationController
+        let destinationVC = destination.topViewController as! UserProfileViewController
+        // Passing data to destination view model
+        destinationVC.viewModel = viewModel.userDetail
+        self.present(destination, animated: true)
     }
     
    //MARK: Outlet Functions
     @IBAction private func submitButtonPressed(_ sender: UIButton) {
         submitButton.isEnabled = false
-        Task {
-            let usernameVerification = viewModel.verifyUsernameValid(usernameText: usernameTextfield.text!)
-            if (usernameVerification != nil){
-                showAlert(usernameVerification)
-            }
-            else {
-                await sendRequest()
-                submitButton.isEnabled = true
-            }
-            if (viewModel.errorMessage == nil){
-                performSegue(withIdentifier: "ShowUserDetail", sender: self)
-            }
-//            print(viewModel.userData!)
+        let usernameVerification = viewModel.verifyUsernameValid(usernameText: usernameTextfield.text!)
+        if (usernameVerification != nil){
+            showAlert(usernameVerification)
+        }
+        else {
+            sendRequest()
         }
     }
     
@@ -113,6 +110,17 @@ class UserLookupViewController: UIViewController, UITextFieldDelegate {
         usernameTextfield.endEditing(true)
     }
 }
-
-
-
+extension UserLookupViewController: UITextFieldDelegate {
+    func textField(_ usernameTextfield: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = usernameTextfield.text ?? ""
+        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: string)
+        if (updatedText.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+            submitButton.isEnabled = false
+        }
+        else {
+            submitButton.isEnabled = true
+        }
+        return true
+    }
+}
+  

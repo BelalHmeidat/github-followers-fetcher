@@ -9,53 +9,51 @@ import Foundation
 import UIKit
 
 class UserLookupViewModel {
-    //MARK: Singleton
-    static let shared = UserLookupViewModel()
     
     //MARK: Models
     let apiService = FollowersAPI()
-    var userDetail : UserProfileViewModel?
+    var userDetail: UserProfileViewModel?
     
     //MARK: properties
-    private(set) var placeholderUsername : String = "Type in a username to lookup"
+    private(set) var placeholderUsername: String = "Type in a username to lookup"
     
-    var errorMessage : String? //taken from the API
-    
-    var userData : [String : Any]?
-
     //MARK: initilizer
-    private init(){}
+    init(){}
     
     //MARK: functions
-    func verifyUsernameValid(usernameText : String)->String?{
+    func verifyUsernameValid(usernameText: String)->String?{
         if (!UsernameVerification.isUsernameValid(username: usernameText)){
             return "Username has to consist of alphanumric characters only!"
         }
         return nil
     }
-//    TODO: Get tid of the properties and use completion handler
-    func connectToAPI(username : String) async {
-        errorMessage = nil
-        userData = nil
-        let url = URL(string : "https://api.github.com/users/\(username)")
-        Task{
-            await apiService.excuteRequest(url: url!) {(responeDict, error) in
-                if (error != nil){
-                    self.errorMessage = error!.localizedDescription
+    
+    func findUser(username: String, completion: @escaping (String?)->()) {
+        let url = URL(string: "https://api.github.com/users/\(username)")
+            apiService.requestUser(url: url!) {(responeDict, error) in
+                if let errorMessage = error{
+                    completion(errorMessage.localizedDescription)
+                }
+                else if let err = responeDict!["message"] as? String {
+                    completion(err)
                 }
                 else {
-                    self.userData = responeDict!
-                    self.errorMessage = responeDict!["message"] as? String
-                    self.passData()
+                    let user = User(id: responeDict!["id"] as! Int, name: responeDict!["name"] as? String ?? "",
+                                    follows: responeDict!["followers"] as! Int,
+                                     bio: responeDict!["bio"] as? String ?? "",
+                                     avatarURL: responeDict!["avatar_url"] as? String ?? "")
+                    self.userDetail = nil
+                    self.getUserAvatar(imageUrl: user.avatarURL) { profileImage in
+                        self.userDetail = UserProfileViewModel(username: username, name: (user.name!), followersCount: (user.follows!), bio: (user.bio!), image: (profileImage))
+                        completion(nil)
+                    }
                 }
             }
-        }
     }
-    private func passData() {
-        apiService.downloadImage(from: URL(string: userData!["avatar_url"] as! String)!) {[weak self] image in
-            let profileImage = image
-            self?.userDetail = UserProfileViewModel(name: self?.userData!["name"] as? String ?? "", followersCount: self?.userData!["followers"] as! Int, bio: self?.userData!["bio"] as? String ?? "", image: profileImage)
+    
+    private func getUserAvatar(imageUrl: String, completion: @escaping (UIImage)->()){
+        FollowersAPI.downloadImage(from: URL(string: imageUrl)!) {image in
+            completion(image)
         }
-
     }
 }

@@ -13,15 +13,58 @@ class UserProfileViewController: UIViewController {
     
     //MARK: Outlets
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak private var loadingIndicator: UIActivityIndicatorView!
     
     //MARK: Initializng
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
+        loadingIndicator.hidesWhenStopped = true
+    }
+    
+    private func presentFollowersViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let followersCollectionViewController = storyboard.instantiateViewController(withIdentifier: "FollowersCollectionViewController") as! FollowersCollectionViewController
+        followersCollectionViewController.viewModel = FollowersCollectionViewModel(userProfileName: self.viewModel?.username, followers: (self.viewModel!.followersList))
+        self.present(followersCollectionViewController, animated: true, completion: nil)
+    }
+    private func sendRequest() {
+        loadingIndicator.startAnimating()
+        viewModel!.findFollower(username: (viewModel?.username)!) { [weak self] errorMessage in
+            if let errorMessage = errorMessage{
+                DispatchQueue.main.async(execute: {
+                    self?.loadingIndicator.stopAnimating()
+                    self?.showAlert(errorMessage)
+                })
+            }
+            else {
+                DispatchQueue.main.async(execute: {
+                    self?.presentFollowersViewController()
+                    self?.loadingIndicator.stopAnimating()
+                })
+            }
+        }
+    }
+    
+    private func showAlert(_ error: String?) {
+        let alert = UIAlertController(title: "Invalid Username!", message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert,animated: true)
+    }
+    
+    private func setupNavigationBar() {
+        let closeBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(closeButtonPressed))
+        closeBarButtonItem.tintColor = .black
+        self.navigationItem.leftBarButtonItem = closeBarButtonItem
     }
     
     //MARK: Outlets functions
-    @IBAction func closeButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction private func closeButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction private func getFollowersButtonPressed(_ sender: UIButton) {
+        sendRequest()
     }
 }
 
@@ -43,7 +86,7 @@ extension UserProfileViewController : UITableViewDelegate, UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if viewModel?.tableUIModelList[indexPath.row] is UserImageTableUIModel{
-            return 300
+            return 200
         }
 //        else if viewModel?.tableUIModelList[indexPath.row] is UserTableUIModel{
 //            return 200

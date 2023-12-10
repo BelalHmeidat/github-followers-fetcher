@@ -21,8 +21,13 @@ class UserDetailTableViewCell: UITableViewCell {
     
     //MARK: Filling the cell
     func setup(configure: UserTableUIModel){
-        nameLabel.text = configure.name
-        followerCountLabel.text = "\(configure.name!) has \(configure.followersCount!) followers"
+        nameLabel.text = configure.name!
+        let followersAttribute = [ NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)]
+        let attributedFollowersCount = NSAttributedString(string: String(configure.followersCount!), attributes: followersAttribute)
+        var followersLabelText = NSMutableAttributedString(string: "\(configure.name!) has ")
+        followersLabelText.append(attributedFollowersCount)
+        followersLabelText.append(NSAttributedString(string:" followers"))
+        followerCountLabel.attributedText = followersLabelText
         bioLabel.text = configure.bio
     }
 }
@@ -32,37 +37,23 @@ class UserImageTableViewCell: UITableViewCell {
     
     //MARK: Outlets
     
-    @IBOutlet weak var userProfile: UIImageView!
+    @IBOutlet weak var userImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    private func makeRounded(imageView: UIImageView) {
+        imageView.layer.borderWidth = 1.0
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.cornerRadius =  userImageView.layer.frame.height/2//image.frame.size.width / 2
+        imageView.clipsToBounds = true
+    }
+    
     func setup(configure: UserImageTableUIModel){
-        userProfile.image = configure.profilePic
-    }
-}
-
-class TableUIModel {
-    
-}
-
-class UserTableUIModel: TableUIModel {
-    var name: String?
-    var followersCount: Int?
-    var bio: String?
-    
-    init(name : String, followersCount : Int, bio : String){
-        self.name = name
-        self.followersCount = followersCount
-        self.bio = bio
-    }
-}
-
-class UserImageTableUIModel: TableUIModel {
-    var profilePic: UIImage?
-    init(profilePic: UIImage?) {
-        self.profilePic = profilePic
+        userImageView.image = configure.profilePic
+        makeRounded(imageView: userImageView)
     }
 }
 
