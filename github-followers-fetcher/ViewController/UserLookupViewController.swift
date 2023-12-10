@@ -85,12 +85,13 @@ class UserLookupViewController: UIViewController {
     
     func presentUserProfileViewController(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destination = storyboard.instantiateViewController(withIdentifier: "showDetail") as! UINavigationController
+        let navController = storyboard.instantiateViewController(withIdentifier: "showDetail") as! UINavigationController
         //accessing the top view controller of the UINavigationController
-        let destinationVC = destination.topViewController as! UserProfileViewController
+        let destinationVC = navController.topViewController as! UserProfileViewController
         // Passing data to destination view model
         destinationVC.viewModel = viewModel.userDetail
-        self.present(destination, animated: true)
+        navController.modalPresentationStyle = .fullScreen
+        self.present(navController, animated: true)
     }
     
    //MARK: Outlet Functions

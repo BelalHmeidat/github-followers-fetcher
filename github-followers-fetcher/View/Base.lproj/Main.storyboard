@@ -247,7 +247,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search Followers" translatesAutoresizingMaskIntoConstraints="NO" id="Shn-Lh-JBt">
-                                <rect key="frame" x="20" y="113" width="353" height="56"/>
+                                <rect key="frame" x="20" y="59" width="353" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -258,7 +258,7 @@
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-O8-ZoI" userLabel="CollectionView">
-                                <rect key="frame" x="0.0" y="189" width="393" height="580"/>
+                                <rect key="frame" x="0.0" y="135" width="393" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OQU-vy-knz">
                                     <size key="itemSize" width="126" height="149"/>
@@ -275,9 +275,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZKe-VA-y8w">
-                                                    <rect key="frame" x="0.0" y="1.3333333333333355" width="80" height="77.333333333333329"/>
+                                                    <rect key="frame" x="0.0" y="1.3333333333333359" width="80" height="77.333333333333314"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="ZKe-VA-y8w" secondAttribute="height" multiplier="1:1" id="8Wb-7u-mSU"/>
+                                                        <constraint firstAttribute="width" constant="80" id="XKQ-6G-15P"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tor-TB-0dB">
@@ -309,19 +310,6 @@
                                     <outlet property="delegate" destination="cGp-b8-bRl" id="XtG-A3-Vy8"/>
                                 </connections>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfe-bN-wql">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <items>
-                                    <navigationItem title="Followers" id="Rle-4F-gOz">
-                                        <barButtonItem key="leftBarButtonItem" image="arrow.backward" catalog="system" id="pA7-G7-09b">
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <connections>
-                                                <action selector="backButtonPressed:" destination="cGp-b8-bRl" id="6FC-PO-9rT"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xFv-JZ-UVV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -329,20 +317,16 @@
                             <constraint firstItem="xFv-JZ-UVV" firstAttribute="trailing" secondItem="Shn-Lh-JBt" secondAttribute="trailing" constant="20" id="2lV-4d-wzd"/>
                             <constraint firstItem="Shn-Lh-JBt" firstAttribute="leading" secondItem="xFv-JZ-UVV" secondAttribute="leading" constant="20" id="6pS-hz-iM2"/>
                             <constraint firstItem="rX8-O8-ZoI" firstAttribute="top" secondItem="Shn-Lh-JBt" secondAttribute="bottom" constant="20" id="AIQ-ax-63A"/>
-                            <constraint firstItem="Bfe-bN-wql" firstAttribute="trailing" secondItem="xFv-JZ-UVV" secondAttribute="trailing" id="Co0-Xs-BvK"/>
-                            <constraint firstItem="Bfe-bN-wql" firstAttribute="leading" secondItem="xFv-JZ-UVV" secondAttribute="leading" id="TfR-16-y6g"/>
+                            <constraint firstItem="Shn-Lh-JBt" firstAttribute="top" secondItem="xFv-JZ-UVV" secondAttribute="top" id="EhR-Ay-Dt8"/>
                             <constraint firstItem="rX8-O8-ZoI" firstAttribute="leading" secondItem="xFv-JZ-UVV" secondAttribute="leading" id="Z7D-I6-mIw"/>
                             <constraint firstItem="xFv-JZ-UVV" firstAttribute="bottom" secondItem="rX8-O8-ZoI" secondAttribute="bottom" id="cJr-lN-qzh"/>
                             <constraint firstItem="rX8-O8-ZoI" firstAttribute="trailing" secondItem="xFv-JZ-UVV" secondAttribute="trailing" id="hol-AP-ESm"/>
-                            <constraint firstItem="Shn-Lh-JBt" firstAttribute="top" secondItem="Bfe-bN-wql" secondAttribute="bottom" constant="10" id="o4C-lF-Qi7"/>
-                            <constraint firstItem="Bfe-bN-wql" firstAttribute="top" secondItem="xFv-JZ-UVV" secondAttribute="top" id="oM7-2p-d5c"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="rX8-O8-ZoI" id="7Zv-Zz-Sau"/>
-                        <outlet property="navigationBar" destination="Bfe-bN-wql" id="r62-YR-Wlc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKR-lV-1rc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -370,7 +354,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">

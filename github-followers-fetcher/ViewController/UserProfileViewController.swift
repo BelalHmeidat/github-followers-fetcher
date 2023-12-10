@@ -18,7 +18,6 @@ class UserProfileViewController: UIViewController {
     //MARK: Initializng
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         loadingIndicator.hidesWhenStopped = true
     }
     
@@ -26,8 +25,9 @@ class UserProfileViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let followersCollectionViewController = storyboard.instantiateViewController(withIdentifier: "FollowersCollectionViewController") as! FollowersCollectionViewController
         followersCollectionViewController.viewModel = FollowersCollectionViewModel(userProfileName: self.viewModel?.username, followers: (self.viewModel!.followersList))
-        self.present(followersCollectionViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(followersCollectionViewController, animated: true)
     }
+    
     private func sendRequest() {
         loadingIndicator.startAnimating()
         viewModel!.findFollower(username: (viewModel?.username)!) { [weak self] errorMessage in
@@ -50,12 +50,6 @@ class UserProfileViewController: UIViewController {
         let alert = UIAlertController(title: "Invalid Username!", message: error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert,animated: true)
-    }
-    
-    private func setupNavigationBar() {
-        let closeBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(closeButtonPressed))
-        closeBarButtonItem.tintColor = .black
-        self.navigationItem.leftBarButtonItem = closeBarButtonItem
     }
     
     //MARK: Outlets functions
