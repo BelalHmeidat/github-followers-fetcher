@@ -1,0 +1,6 @@
+framework module Pods_github_followers_fetcher {
+  umbrella header "Pods-github-followers-fetcher-umbrella.h"
+
+  export *
+  module * { export * }
+}

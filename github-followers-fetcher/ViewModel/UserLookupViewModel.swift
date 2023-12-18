@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class UserLookupViewModel {
     
@@ -28,31 +29,35 @@ class UserLookupViewModel {
         return nil
     }
     
-    func findUser(username: String, completion: @escaping (String?)->()) {
-        let url = URL(string: "https://api.github.com/users/\(username)")
-            apiService.requestUser(url: url!) {(responeDict, error) in
-                if let errorMessage = error{
-                    completion(errorMessage.localizedDescription)
-                }
-                else if let err = responeDict!["message"] as? String {
-                    completion(err)
-                }
-                else {
-                    let user = User(id: responeDict!["id"] as! Int, name: responeDict!["name"] as? String ?? "",
-                                    follows: responeDict!["followers"] as! Int,
-                                     bio: responeDict!["bio"] as? String ?? "",
-                                     avatarURL: responeDict!["avatar_url"] as? String ?? "")
+    func findUser(username: String, completion: @escaping ((String?, String?))->()){
+        let url = URL(string: "https://api.github.com/users/\(username)")!
+//        let encoder = URLEncodedFormParameterEncoder(encoder: URLEncodedFormEncoder(nilEncoding: .dropKey))
+        AF.request(url).validate().responseDecodable(of: User.self) { response in
+            switch (response.result) {
+                case .success(let data):
                     self.userDetail = nil
-                    self.getUserAvatar(imageUrl: user.avatarURL) { profileImage in
-                        self.userDetail = UserProfileViewModel(username: username, name: (user.name!), followersCount: (user.follows!), bio: (user.bio!), image: (profileImage))
-                        completion(nil)
+                    self.getUserAvatar(imageUrl: data.avatarURL) { profileImage in
+                        self.userDetail = UserProfileViewModel(username: username, name: (data.name ?? "" ), followersCount: (data.follows!), bio: (data.bio ?? ""), image: (profileImage))
+                        completion((nil, nil))
                     }
-                }
+                case .failure(let error):
+                    if let statusCode = error.responseCode {
+                        switch (statusCode) {
+                        case 404:
+                            completion(("Invalid Username!", "User not Found!"))
+                        default:
+                            completion(("Error", response.error?.errorDescription!))
+                        }
+                    }
+                    else {
+                        completion(("Error", error.localizedDescription))
+                    }
             }
+        }
     }
     
     private func getUserAvatar(imageUrl: String, completion: @escaping (UIImage)->()){
-        FollowersAPI.downloadImage(from: URL(string: imageUrl)!) {image in
+        FollowersAPI.downloadImage(url: URL(string: imageUrl)!) {image in
             completion(image)
         }
     }

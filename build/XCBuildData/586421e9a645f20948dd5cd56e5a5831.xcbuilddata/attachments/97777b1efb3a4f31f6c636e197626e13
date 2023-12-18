@@ -1,0 +1,5 @@
+ extern const unsigned char Pods_github_followers_fetcherVersionString[];
+ extern const double Pods_github_followers_fetcherVersionNumber;
+
+ const unsigned char Pods_github_followers_fetcherVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_github_followers_fetcher  PROJECT:Pods-1" "\n";
+ const double Pods_github_followers_fetcherVersionNumber __attribute__ ((used)) = (double)1.;

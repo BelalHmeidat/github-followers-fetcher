@@ -1,0 +1,178 @@
+{
+  "" : {
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/github-followers-fetcher-master.dia",
+    "emit-module-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/github-followers-fetcher-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/github-followers-fetcher-master-emit-module.dia",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/github-followers-fetcher-master.swiftdeps"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/APIManager.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/APIManager.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/APIManager.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/APIManager.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/APIManager.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/APIManager.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/APIManager.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/APIManager.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/APIManager~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/AppDelegate.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/AppDelegate.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/FollowersAPI.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersAPI.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersAPI.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersAPI.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersAPI.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersAPI.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersAPI.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersAPI.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersAPI~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/Model/User.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/User.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/User.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/User.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/User.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/User.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/User.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/User.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/User~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/Model/UsernameVerification.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UsernameVerification.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UsernameVerification.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UsernameVerification.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UsernameVerification.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UsernameVerification.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UsernameVerification.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UsernameVerification.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UsernameVerification~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/SceneDelegate.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/SceneDelegate.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/SceneDelegate.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/SceneDelegate.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/SceneDelegate.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/SceneDelegate.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/SceneDelegate.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/SceneDelegate.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/SceneDelegate~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewController/FollowerCollectionViewCell.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowerCollectionViewCell.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowerCollectionViewCell.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowerCollectionViewCell.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowerCollectionViewCell.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowerCollectionViewCell.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowerCollectionViewCell.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowerCollectionViewCell.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowerCollectionViewCell~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewController/FollowersCollectionViewController.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewController.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewController.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewController.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewController.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewController.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewController.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewController.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewController~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewController/UserDetailTableViewCell.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserDetailTableViewCell.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserDetailTableViewCell.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserDetailTableViewCell.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserDetailTableViewCell.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserDetailTableViewCell.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserDetailTableViewCell.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserDetailTableViewCell.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserDetailTableViewCell~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewController/UserLookupViewController.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewController.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewController.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewController.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewController.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewController.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewController.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewController.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewController~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewController/UserProfileViewController.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewController.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewController.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewController.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewController.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewController.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewController.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewController.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewController~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewModel/CollectionUIModel.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/CollectionUIModel.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/CollectionUIModel.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/CollectionUIModel.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/CollectionUIModel.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/CollectionUIModel.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/CollectionUIModel.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/CollectionUIModel.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/CollectionUIModel~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewModel/FollowersCollectionViewModel.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewModel.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewModel.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewModel.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewModel.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewModel.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewModel.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewModel.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/FollowersCollectionViewModel~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewModel/TableUIModel.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/TableUIModel.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/TableUIModel.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/TableUIModel.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/TableUIModel.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/TableUIModel.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/TableUIModel.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/TableUIModel.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/TableUIModel~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewModel/UserLookupViewModel.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewModel.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewModel.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewModel.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewModel.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewModel.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewModel.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewModel.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserLookupViewModel~partial.swiftmodule"
+  },
+  "/Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewModel/UserProfileViewModel.swift" : {
+    "const-values" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewModel.swiftconstvalues",
+    "dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewModel.d",
+    "diagnostics" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewModel.dia",
+    "index-unit-output-path" : "/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewModel.o",
+    "llvm-bc" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewModel.bc",
+    "object" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewModel.o",
+    "swift-dependencies" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewModel.swiftdeps",
+    "swiftmodule" : "/Users/belal/Projects/Swift/github-followers-fetcher/build/github-followers-fetcher.build/Debug-iphonesimulator/github-followers-fetcher.build/Objects-normal/arm64/UserProfileViewModel~partial.swiftmodule"
+  }
+}

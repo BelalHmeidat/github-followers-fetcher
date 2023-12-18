@@ -21,12 +21,27 @@
 		1D84728B2AFD8C1000DF22C7 /* FollowersCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D84728A2AFD8C1000DF22C7 /* FollowersCollectionViewModel.swift */; };
 		1D84728D2AFD9BD400DF22C7 /* FollowerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D84728C2AFD9BD400DF22C7 /* FollowerCollectionViewCell.swift */; };
 		1D8B49E02AEFC2B100180D2E /* UsernameVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B49DF2AEFC2B100180D2E /* UsernameVerification.swift */; };
-		1D8B49E32AEFED3800180D2E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B49E22AEFED3800180D2E /* APIManager.swift */; };
 		1D8B49E52AEFED8500180D2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B49E42AEFED8500180D2E /* User.swift */; };
 		1DE675BE2B0F830D00B9D807 /* TableUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE675BD2B0F830D00B9D807 /* TableUIModel.swift */; };
+		1DE708F32B2F10A800ABA9B8 /* Pods_github_followers_fetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE708F22B2F10A800ABA9B8 /* Pods_github_followers_fetcher.framework */; };
+		1DE708F42B2F10A800ABA9B8 /* Pods_github_followers_fetcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE708F22B2F10A800ABA9B8 /* Pods_github_followers_fetcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1DE9EE0A2B222E0900F0CE0B /* CollectionUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9EE092B222E0900F0CE0B /* CollectionUIModel.swift */; };
 		1DFB0B5A2AEA6FE000E62362 /* UserLookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB0B592AEA6FE000E62362 /* UserLookupViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DE708F02B2E659800ABA9B8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1DE708F42B2F10A800ABA9B8 /* Pods_github_followers_fetcher.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D43A3A12B17509B002306B5 /* FollowersCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowersCollectionViewController.swift; sourceTree = "<group>"; };
@@ -45,11 +60,15 @@
 		1D84728A2AFD8C1000DF22C7 /* FollowersCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FollowersCollectionViewModel.swift; path = "github-followers-fetcher/ViewModel/FollowersCollectionViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		1D84728C2AFD9BD400DF22C7 /* FollowerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D8B49DF2AEFC2B100180D2E /* UsernameVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsernameVerification.swift; path = "github-followers-fetcher/Model/UsernameVerification.swift"; sourceTree = SOURCE_ROOT; };
-		1D8B49E22AEFED3800180D2E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1D8B49E42AEFED8500180D2E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1DE675BD2B0F830D00B9D807 /* TableUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableUIModel.swift; sourceTree = "<group>"; };
+		1DE708ED2B2E659700ABA9B8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE708F22B2F10A800ABA9B8 /* Pods_github_followers_fetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_github_followers_fetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE9EE092B222E0900F0CE0B /* CollectionUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUIModel.swift; sourceTree = "<group>"; };
 		1DFB0B592AEA6FE000E62362 /* UserLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLookupViewModel.swift; sourceTree = "<group>"; };
+		5728B14544599231A28EE988 /* Pods-github-followers-fetcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-followers-fetcher.release.xcconfig"; path = "Target Support Files/Pods-github-followers-fetcher/Pods-github-followers-fetcher.release.xcconfig"; sourceTree = "<group>"; };
+		A3B0DF021BBEE1D09BAF26E1 /* Pods_github_followers_fetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_github_followers_fetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D302243B00328F9F180BE287 /* Pods-github-followers-fetcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-followers-fetcher.debug.xcconfig"; path = "Target Support Files/Pods-github-followers-fetcher/Pods-github-followers-fetcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DE708F32B2F10A800ABA9B8 /* Pods_github_followers_fetcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +88,8 @@
 			children = (
 				1D6CA5772ADEA24D0020CBC2 /* github-followers-fetcher */,
 				1D6CA5762ADEA24D0020CBC2 /* Products */,
+				8E0F664BF02432EAD46FC033 /* Pods */,
+				B5BA2EDB95A219F6A43DCF24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,7 +104,6 @@
 		1D6CA5772ADEA24D0020CBC2 /* github-followers-fetcher */ = {
 			isa = PBXGroup;
 			children = (
-				1D8B49E22AEFED3800180D2E /* APIManager.swift */,
 				1D4AC9772AF11C4800345BDD /* FollowersAPI.swift */,
 				1D8B49E12AEFC2BA00180D2E /* Model */,
 				1DFB0B582AEA6FB400E62362 /* ViewModel */,
@@ -138,6 +159,25 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		8E0F664BF02432EAD46FC033 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D302243B00328F9F180BE287 /* Pods-github-followers-fetcher.debug.xcconfig */,
+				5728B14544599231A28EE988 /* Pods-github-followers-fetcher.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B5BA2EDB95A219F6A43DCF24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DE708F22B2F10A800ABA9B8 /* Pods_github_followers_fetcher.framework */,
+				1DE708ED2B2E659700ABA9B8 /* Alamofire.framework */,
+				A3B0DF021BBEE1D09BAF26E1 /* Pods_github_followers_fetcher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6CA5892ADEA24F0020CBC2 /* Build configuration list for PBXNativeTarget "github-followers-fetcher" */;
 			buildPhases = (
+				8B4B31B66ACDEBC28839CF33 /* [CP] Check Pods Manifest.lock */,
 				1D6CA5712ADEA24D0020CBC2 /* Sources */,
 				1D6CA5722ADEA24D0020CBC2 /* Frameworks */,
 				1D6CA5732ADEA24D0020CBC2 /* Resources */,
+				A5B09A8C8E83CEC931BAAC91 /* [CP] Embed Pods Frameworks */,
+				1DE708F02B2E659800ABA9B8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +247,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B4B31B66ACDEBC28839CF33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-github-followers-fetcher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5B09A8C8E83CEC931BAAC91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-github-followers-fetcher/Pods-github-followers-fetcher-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-github-followers-fetcher/Pods-github-followers-fetcher-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-github-followers-fetcher/Pods-github-followers-fetcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D6CA5712ADEA24D0020CBC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -211,7 +296,6 @@
 			files = (
 				1D6CA57D2ADEA24D0020CBC2 /* UserLookupViewController.swift in Sources */,
 				1D4AC9802AF8F7F600345BDD /* UserDetailTableViewCell.swift in Sources */,
-				1D8B49E32AEFED3800180D2E /* APIManager.swift in Sources */,
 				1D43A3A22B17509B002306B5 /* FollowersCollectionViewController.swift in Sources */,
 				1DFB0B5A2AEA6FE000E62362 /* UserLookupViewModel.swift in Sources */,
 				1D4AC9822AF95E7300345BDD /* UserProfileViewModel.swift in Sources */,
@@ -371,12 +455,14 @@
 		};
 		1D6CA58A2ADEA24F0020CBC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D302243B00328F9F180BE287 /* Pods-github-followers-fetcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F8N5K6285G;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "github-followers-fetcher/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -399,12 +485,14 @@
 		};
 		1D6CA58B2ADEA24F0020CBC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5728B14544599231A28EE988 /* Pods-github-followers-fetcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F8N5K6285G;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "github-followers-fetcher/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

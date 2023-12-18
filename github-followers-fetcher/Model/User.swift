@@ -8,25 +8,26 @@
 
 struct User{
     var id: Int
-    var username: String?
+    var username: String
     var name: String?
     var follows: Int?
     var bio: String?
     var avatarURL: String
     
-    init(id: Int, name : String, follows: Int, bio : String, avatarURL: String){
-        self.id = id
-        self.name = name
-        self.follows = follows
-        self.avatarURL = avatarURL
-        self.bio = bio
-    }
+//    init(id: Int, name: String?, follows: Int?, bio: String, avatarURL: String, username: String){
+//        self.id = id
+//        self.name = name ?? ""
+//        self.follows = follows ?? 0
+//        self.avatarURL = avatarURL
+//        self.bio = bio
+//        self.username = username
+//    }
     
-    init(id: Int, username: String, avatarURL: String){
-        self.id = id
-        self.username = username
-        self.avatarURL = avatarURL
-    }
+//    init(id: Int, username: String, avatarURL: String){
+//        self.id = id
+//        self.username = username
+//        self.avatarURL = avatarURL
+//    }
 }
 
 extension User: Codable {
@@ -37,15 +38,16 @@ extension User: Codable {
         case follows = "followers"
         case bio
         case avatarURL = "avatar_url"
-        
     }
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decode(Int.self, forKey: .id)
-        username = try values.decode(String.self, forKey: .username)
-        name = try values.decode(String.self, forKey: .name)
-        follows = try values.decode(Int.self, forKey: .follows)
-        bio = try values.decode(String.self, forKey: .bio)
-        avatarURL = try values.decode(String.self, forKey: .avatarURL)
+        
+        self.id = try values.decode(Int.self, forKey: .id)
+        self.username = try values.decode(String.self, forKey: .username)
+        self.name = try values.decodeIfPresent(String?.self, forKey: .name) ?? ""
+        self.follows = try values.decodeIfPresent(Int?.self, forKey: .follows) ?? 0
+        self.bio = try values.decodeIfPresent(String?.self, forKey: .bio) ?? ""
+        self.avatarURL = try values.decode(String.self, forKey: .avatarURL)
     }
 }

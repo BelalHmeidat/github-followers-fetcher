@@ -1,0 +1,7 @@
+Target dependency graph (3 targets)
+Target 'github-followers-fetcher' in project 'github-followers-fetcher'
+➜ Implicit dependency on target 'Pods-github-followers-fetcher' in project 'Pods' via file 'Pods_github_followers_fetcher.framework' in build phase 'Link Binary'
+➜ Implicit dependency on target 'Alamofire' in project 'Pods' via file 'Alamofire.framework' in build phase 'Link Binary'
+Target 'Pods-github-followers-fetcher' in project 'Pods'
+➜ Explicit dependency on target 'Alamofire' in project 'Pods'
+Target 'Alamofire' in project 'Pods' (no dependencies)

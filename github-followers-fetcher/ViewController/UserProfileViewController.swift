@@ -47,14 +47,18 @@ class UserProfileViewController: UIViewController {
     }
     
     private func showAlert(_ error: String?) {
-        let alert = UIAlertController(title: "Invalid Username!", message: error, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert,animated: true)
     }
     
     //MARK: Outlets functions
-    @IBAction private func closeButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func closeButtonAction(_ sender: UIBarButtonItem) {
+        print("click")
+//        self.navigationController?.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
+
     }
     
     @IBAction private func getFollowersButtonPressed(_ sender: UIButton) {

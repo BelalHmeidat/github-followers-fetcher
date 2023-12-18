@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class UserProfileViewModel {
     var apiService: FollowersAPI = FollowersAPI()
@@ -28,21 +29,26 @@ class UserProfileViewModel {
     
     func findFollower(username: String, completion: @escaping (String?)->()) {
         let url = URL(string: "https://api.github.com/users/\(username)/followers")
-        apiService.requestFollower(url: url!) {(responeDict, error) in
-            if let errorMessage = error{
-                completion(errorMessage.localizedDescription)
-            }
-            else {
-                if let followersResponse = responeDict {
-                    self.followersList = [] /// resolves duplicates
-                    for user in followersResponse {
-                        let follower = User(id: user["id"] as! Int, username: user["login"] as! String, avatarURL: user["avatar_url"] as! String)
-                        self.followersList.append(follower)
+        AF.request(url!).validate().responseDecodable(of: [User].self) { response in
+            switch (response.result) {
+                case .success(let data):
+                    self.followersList = data
+                    completion(nil)
+                
+                case .failure(let error):
+                    if let statusCode = error.responseCode {
+                        switch (statusCode) {
+                        case 404:
+                            completion(error.localizedDescription)
+                            
+                        default:
+                            completion(error.localizedDescription)
+                        }
                     }
-                }
-                completion(nil)
+                    else {
+                        completion(error.localizedDescription)
+                    }
             }
         }
     }
-    
 }

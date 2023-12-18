@@ -38,7 +38,7 @@ class FollowerCollectionViewCell: UICollectionViewCell {
     }
     
     private func getUserAvatar(imageUrl: String, completion: @escaping (UIImage)->()){
-        FollowersAPI.downloadImage(from: URL(string: imageUrl)!) {image in
+        FollowersAPI.downloadImage(url: URL(string: imageUrl)!) {image in
             completion(image)
         }
     }

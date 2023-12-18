@@ -46,19 +46,34 @@ class UserLookupViewController: UIViewController {
         addPaddingToTextfield()
     }
     
-    private func showAlert(_ error: String?) {
-        let alert = UIAlertController(title: "Invalid Username!", message: error, preferredStyle: .alert)
+    private func showAlert(title: String?, error: String?) {
+        let alert = UIAlertController(title: title, message: error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert,animated: true)
     }
     
     private func sendRequest() {
         loadingIndicator.startAnimating()
-        viewModel.findUser(username: usernameTextfield.text!) { [weak self] errorMessage in
+//        viewModel.findUser(username: usernameTextfield.text!) { [weak self] errorMessage in
+//            if let errorMessage = errorMessage{
+//                DispatchQueue.main.async(execute: {
+//                    self?.loadingIndicator.stopAnimating()
+//                    self?.showAlert(errorMessage)
+//                })
+//            }
+//            else {
+//                self?.presentUserProfileViewController()
+//            }
+//            DispatchQueue.main.async(execute: {
+//                self?.submitButton.isEnabled = true
+//                self?.loadingIndicator.stopAnimating()
+//            })
+//        }
+        viewModel.findUser(username: usernameTextfield.text!) { [weak self] (title, errorMessage) in
             if let errorMessage = errorMessage{
                 DispatchQueue.main.async(execute: {
                     self?.loadingIndicator.stopAnimating()
-                    self?.showAlert(errorMessage)
+                    self?.showAlert(title: title, error: errorMessage)
                 })
             }
             else {
@@ -86,9 +101,9 @@ class UserLookupViewController: UIViewController {
     func presentUserProfileViewController(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let navController = storyboard.instantiateViewController(withIdentifier: "showDetail") as! UINavigationController
-        //accessing the top view controller of the UINavigationController
+        /// accessing the top view controller of the UINavigationController
         let destinationVC = navController.topViewController as! UserProfileViewController
-        // Passing data to destination view model
+        /// Passing data to destination view model
         destinationVC.viewModel = viewModel.userDetail
         navController.modalPresentationStyle = .fullScreen
         self.present(navController, animated: true)
@@ -99,7 +114,7 @@ class UserLookupViewController: UIViewController {
         submitButton.isEnabled = false
         let usernameVerification = viewModel.verifyUsernameValid(usernameText: usernameTextfield.text!)
         if (usernameVerification != nil){
-            showAlert(usernameVerification)
+            showAlert(title: "Invalid Username", error: usernameVerification)
         }
         else {
             sendRequest()
