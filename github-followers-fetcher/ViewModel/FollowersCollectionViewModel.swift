@@ -14,7 +14,7 @@ class FollowersCollectionViewModel {
     init(userProfileName: String?, followers: [User]) {
         self.followerCells = []
         for follower in followers {
-            self.followerCells.append(CollectionUIModel(username: follower.username!, avatarURL: follower.avatarURL))
+            self.followerCells.append(CollectionUIModel(username: follower.username, avatarURL: follower.avatarURL))
         }
     }
     

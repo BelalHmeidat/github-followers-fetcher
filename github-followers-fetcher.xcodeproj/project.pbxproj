@@ -21,10 +21,11 @@
 		1D84728B2AFD8C1000DF22C7 /* FollowersCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D84728A2AFD8C1000DF22C7 /* FollowersCollectionViewModel.swift */; };
 		1D84728D2AFD9BD400DF22C7 /* FollowerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D84728C2AFD9BD400DF22C7 /* FollowerCollectionViewCell.swift */; };
 		1D8B49E02AEFC2B100180D2E /* UsernameVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B49DF2AEFC2B100180D2E /* UsernameVerification.swift */; };
-		1D8B49E32AEFED3800180D2E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B49E22AEFED3800180D2E /* APIManager.swift */; };
 		1D8B49E52AEFED8500180D2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B49E42AEFED8500180D2E /* User.swift */; };
 		1DE675BE2B0F830D00B9D807 /* TableUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE675BD2B0F830D00B9D807 /* TableUIModel.swift */; };
+		1DE8803E2B334ED300993604 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8803D2B334ED300993604 /* Endpoints.swift */; };
 		1DE9EE0A2B222E0900F0CE0B /* CollectionUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9EE092B222E0900F0CE0B /* CollectionUIModel.swift */; };
+		1DEF36F32B39A70A00B03DF8 /* NetwrokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEF36F22B39A70A00B03DF8 /* NetwrokManager.swift */; };
 		1DFB0B5A2AEA6FE000E62362 /* UserLookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB0B592AEA6FE000E62362 /* UserLookupViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,10 +46,11 @@
 		1D84728A2AFD8C1000DF22C7 /* FollowersCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FollowersCollectionViewModel.swift; path = "github-followers-fetcher/ViewModel/FollowersCollectionViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		1D84728C2AFD9BD400DF22C7 /* FollowerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D8B49DF2AEFC2B100180D2E /* UsernameVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsernameVerification.swift; path = "github-followers-fetcher/Model/UsernameVerification.swift"; sourceTree = SOURCE_ROOT; };
-		1D8B49E22AEFED3800180D2E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1D8B49E42AEFED8500180D2E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1DE675BD2B0F830D00B9D807 /* TableUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableUIModel.swift; sourceTree = "<group>"; };
+		1DE8803D2B334ED300993604 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		1DE9EE092B222E0900F0CE0B /* CollectionUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUIModel.swift; sourceTree = "<group>"; };
+		1DEF36F22B39A70A00B03DF8 /* NetwrokManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwrokManager.swift; sourceTree = "<group>"; };
 		1DFB0B592AEA6FE000E62362 /* UserLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLookupViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,8 +84,9 @@
 		1D6CA5772ADEA24D0020CBC2 /* github-followers-fetcher */ = {
 			isa = PBXGroup;
 			children = (
-				1D8B49E22AEFED3800180D2E /* APIManager.swift */,
 				1D4AC9772AF11C4800345BDD /* FollowersAPI.swift */,
+				1DEF36F22B39A70A00B03DF8 /* NetwrokManager.swift */,
+				1DE8803D2B334ED300993604 /* Endpoints.swift */,
 				1D8B49E12AEFC2BA00180D2E /* Model */,
 				1DFB0B582AEA6FB400E62362 /* ViewModel */,
 				1DFB0B5C2AEA705B00E62362 /* ViewController */,
@@ -211,7 +214,6 @@
 			files = (
 				1D6CA57D2ADEA24D0020CBC2 /* UserLookupViewController.swift in Sources */,
 				1D4AC9802AF8F7F600345BDD /* UserDetailTableViewCell.swift in Sources */,
-				1D8B49E32AEFED3800180D2E /* APIManager.swift in Sources */,
 				1D43A3A22B17509B002306B5 /* FollowersCollectionViewController.swift in Sources */,
 				1DFB0B5A2AEA6FE000E62362 /* UserLookupViewModel.swift in Sources */,
 				1D4AC9822AF95E7300345BDD /* UserProfileViewModel.swift in Sources */,
@@ -219,8 +221,10 @@
 				1D4AC9782AF11C4800345BDD /* FollowersAPI.swift in Sources */,
 				1D6CA5792ADEA24D0020CBC2 /* AppDelegate.swift in Sources */,
 				1DE675BE2B0F830D00B9D807 /* TableUIModel.swift in Sources */,
+				1DE8803E2B334ED300993604 /* Endpoints.swift in Sources */,
 				1D6CA57B2ADEA24D0020CBC2 /* SceneDelegate.swift in Sources */,
 				1D4AC97C2AF39CF000345BDD /* UserProfileViewController.swift in Sources */,
+				1DEF36F32B39A70A00B03DF8 /* NetwrokManager.swift in Sources */,
 				1D84728B2AFD8C1000DF22C7 /* FollowersCollectionViewModel.swift in Sources */,
 				1DE9EE0A2B222E0900F0CE0B /* CollectionUIModel.swift in Sources */,
 				1D84728D2AFD9BD400DF22C7 /* FollowerCollectionViewCell.swift in Sources */,

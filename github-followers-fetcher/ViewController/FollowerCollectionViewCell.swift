@@ -22,7 +22,7 @@ class FollowerCollectionViewCell: UICollectionViewCell {
     func setup(configure: CollectionUIModel){
         followerName.text = configure.username
         let imageURL = configure.avatarURL
-        getUserAvatar(imageUrl: imageURL , completion: {
+        NetworkManager.shared.getUserAvatar(imageUrl: imageURL , completion: {
             [weak self] image in
             self?.followerImage.image = image
         })
@@ -35,11 +35,5 @@ class FollowerCollectionViewCell: UICollectionViewCell {
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.cornerRadius = followerImage.layer.frame.height/2
         imageView.clipsToBounds = true
-    }
-    
-    private func getUserAvatar(imageUrl: String, completion: @escaping (UIImage)->()){
-        FollowersAPI.downloadImage(from: URL(string: imageUrl)!) {image in
-            completion(image)
-        }
     }
 }

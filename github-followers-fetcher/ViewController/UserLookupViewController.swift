@@ -47,7 +47,7 @@ class UserLookupViewController: UIViewController {
     }
     
     private func showAlert(_ error: String?) {
-        let alert = UIAlertController(title: "Invalid Username!", message: error, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error!", message: error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert,animated: true)
     }
@@ -62,7 +62,9 @@ class UserLookupViewController: UIViewController {
                 })
             }
             else {
+                DispatchQueue.main.async(execute: {
                 self?.presentUserProfileViewController()
+                })
             }
             DispatchQueue.main.async(execute: {
                 self?.submitButton.isEnabled = true

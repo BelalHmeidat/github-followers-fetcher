@@ -11,7 +11,6 @@ import UIKit
 class UserLookupViewModel {
     
     //MARK: Models
-    let apiService = FollowersAPI()
     var userDetail: UserProfileViewModel?
     
     //MARK: properties
@@ -28,32 +27,18 @@ class UserLookupViewModel {
         return nil
     }
     
-    func findUser(username: String, completion: @escaping (String?)->()) {
-        let url = URL(string: "https://api.github.com/users/\(username)")
-            apiService.requestUser(url: url!) {(responeDict, error) in
-                if let errorMessage = error{
-                    completion(errorMessage.localizedDescription)
-                }
-                else if let err = responeDict!["message"] as? String {
-                    completion(err)
-                }
-                else {
-                    let user = User(id: responeDict!["id"] as! Int, name: responeDict!["name"] as? String ?? "",
-                                    follows: responeDict!["followers"] as! Int,
-                                     bio: responeDict!["bio"] as? String ?? "",
-                                     avatarURL: responeDict!["avatar_url"] as? String ?? "")
-                    self.userDetail = nil
-                    self.getUserAvatar(imageUrl: user.avatarURL) { profileImage in
-                        self.userDetail = UserProfileViewModel(username: username, name: (user.name!), followersCount: (user.follows!), bio: (user.bio!), image: (profileImage))
-                        completion(nil)
-                    }
-                }
-            }
-    }
     
-    private func getUserAvatar(imageUrl: String, completion: @escaping (UIImage)->()){
-        FollowersAPI.downloadImage(from: URL(string: imageUrl)!) {image in
-            completion(image)
+    func findUser(username: String, completion: @escaping (String?)->()) {
+        NetworkManager.shared.fetchUserProfile(username: username) {
+            (user: User?, errorMessage) in
+            if let user = user {
+                self.userDetail = nil
+                self.userDetail = UserProfileViewModel(username: username, name: (user.name!), followersCount: (user.follows!), bio: (user.bio!), imageURL: user.avatarURL)
+                completion(nil)
+            }
+            else {
+                completion(errorMessage)
+            }
         }
     }
 }

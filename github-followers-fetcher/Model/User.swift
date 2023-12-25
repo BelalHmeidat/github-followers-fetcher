@@ -8,25 +8,11 @@
 
 struct User{
     var id: Int
-    var username: String?
+    var username: String
     var name: String?
     var follows: Int?
     var bio: String?
     var avatarURL: String
-    
-    init(id: Int, name : String, follows: Int, bio : String, avatarURL: String){
-        self.id = id
-        self.name = name
-        self.follows = follows
-        self.avatarURL = avatarURL
-        self.bio = bio
-    }
-    
-    init(id: Int, username: String, avatarURL: String){
-        self.id = id
-        self.username = username
-        self.avatarURL = avatarURL
-    }
 }
 
 extension User: Codable {
@@ -43,9 +29,9 @@ extension User: Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(Int.self, forKey: .id)
         username = try values.decode(String.self, forKey: .username)
-        name = try values.decode(String.self, forKey: .name)
-        follows = try values.decode(Int.self, forKey: .follows)
-        bio = try values.decode(String.self, forKey: .bio)
+        name = try values.decodeIfPresent(String.self, forKey: .name) ?? ""
+        follows = try values.decodeIfPresent(Int.self, forKey: .follows) ?? 0
+        bio = try values.decodeIfPresent(String.self, forKey: .bio) ?? ""
         avatarURL = try values.decode(String.self, forKey: .avatarURL)
     }
 }

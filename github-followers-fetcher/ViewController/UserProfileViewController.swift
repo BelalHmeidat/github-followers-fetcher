@@ -24,7 +24,7 @@ class UserProfileViewController: UIViewController {
     private func presentFollowersViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let followersCollectionViewController = storyboard.instantiateViewController(withIdentifier: "FollowersCollectionViewController") as! FollowersCollectionViewController
-        followersCollectionViewController.viewModel = FollowersCollectionViewModel(userProfileName: self.viewModel?.username, followers: (self.viewModel!.followersList))
+        followersCollectionViewController.viewModel = FollowersCollectionViewModel(userProfileName: self.viewModel!.username, followers: self.viewModel!.followersList)
         self.navigationController?.pushViewController(followersCollectionViewController, animated: true)
     }
     
@@ -54,7 +54,7 @@ class UserProfileViewController: UIViewController {
     
     //MARK: Outlets functions
     @IBAction private func closeButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction private func getFollowersButtonPressed(_ sender: UIButton) {
