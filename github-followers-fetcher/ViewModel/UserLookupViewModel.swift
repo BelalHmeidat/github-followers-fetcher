@@ -29,7 +29,7 @@ class UserLookupViewModel {
     
     
     func findUser(username: String, completion: @escaping (String?)->()) {
-        NetworkManager.shared.fetchUserProfile(username: username) {
+        FollowersAPI.fetchUserProfile(username: username) {
             (user: User?, errorMessage) in
             if let user = user {
                 self.userDetail = nil

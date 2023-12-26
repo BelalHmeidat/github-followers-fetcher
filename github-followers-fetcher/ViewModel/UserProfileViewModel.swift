@@ -23,7 +23,7 @@ class UserProfileViewModel {
     }
     
     func findFollower(username: String, completion: @escaping (String?)->()) {
-        NetworkManager.shared.fetchFollower(username: username) {
+        FollowersAPI.fetchFollower(username: username) {
             (FollowerList: [User]?, errorMessage) in
             if let FollowerList = FollowerList {
                 self.followersList = FollowerList

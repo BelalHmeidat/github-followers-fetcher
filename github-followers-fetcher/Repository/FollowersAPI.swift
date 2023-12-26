@@ -1,22 +1,17 @@
 //
-//  NetwrokManager.swift
+//  FollowersAPI.swift
 //  github-followers-fetcher
 //
 //  Created by Belal Hmeidat on 12/25/23.
 //
 
 import Foundation
-import UIKit
 
-class NetworkManager{
-    
-    static var shared = NetworkManager()
-    
-    private init(){}
-    
-    func fetchUserProfile(username: String, completion: @escaping (User?, String?)->()){
+class FollowersAPI{
+        
+    static func fetchUserProfile(username: String, completion: @escaping (User?, String?)->()){
         let request = Endpoints.getUser(user: username).request!
-        FollowersAPI.shared.excuteRequest(request: request) {
+        NetworkingManager.shared.excuteRequest(request: request) {
             (response: User?, errorMessage) in
             if let errorMessage = errorMessage {
                 completion(nil, errorMessage)
@@ -30,12 +25,11 @@ class NetworkManager{
                 }
             }
         }
-        
     }
     
-    func fetchFollower(username: String, completion: @escaping ([User]?, String?)->()){
+    static func fetchFollower(username: String, completion: @escaping ([User]?, String?)->()){
         let request = Endpoints.getFollowerList(user: username).request!
-        FollowersAPI.shared.excuteRequest(request: request) {
+        NetworkingManager.shared.excuteRequest(request: request) {
             (response: [User]?, error) in
             if let errorMessage = error {
                 completion(nil, errorMessage)
@@ -50,9 +44,13 @@ class NetworkManager{
         }
     }
     
-    func getUserAvatar(imageUrl: String, completion: @escaping (UIImage)->()){
-        FollowersAPI.shared.downloadImage(from: URL(string: imageUrl)!) {image in
-            completion(image)
+    static func getUserAvatarData(imageURL: String, completion: @escaping (_ imageData: Data?, _ errorMessage: String?) -> ()) {
+        NetworkingManager.shared.getImage(from: URL(string: imageURL)!) { data, response, error  in
+            guard let data = data, error == nil else {
+                completion(nil, error?.localizedDescription)
+                return
+            }
+            completion(data, nil)
         }
     }
 }

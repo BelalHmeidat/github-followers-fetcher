@@ -8,36 +8,15 @@ enum APIError: String {
     case noConnection = "Error connecting to the server! Make sure you are connected to the internet."
 }
     
-class FollowersAPI {
+class NetworkingManager {
     
-    static let shared = FollowersAPI()
+    static let shared = NetworkingManager()
     
     private init(){}
     
-    private func getImage(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+    func getImage(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
-    
-    func downloadImage(from url: URL, completion: @escaping (UIImage) -> ()){
-        var image : UIImage = UIImage(systemName: "person")!
-        getImage(from: url) { data, response, error in
-            guard let data = data, error == nil else {
-                completion(image)
-                return
-            }
-            // always update the UI from the main thread
-            DispatchQueue.main.async() { 
-                image = UIImage(data: data)!
-                completion(image)
-            }
-        }
-    }
-    
-//    private func createRequest(url: String) -> URLRequest?{
-//        guard let url = URL(string: url) else {return nil}
-//        let request = URLRequest(url: url)
-//        return request
-//    }
     
     func excuteRequest<T: Decodable>(request: URLRequest,  completion: @escaping (T?, String?) -> Void){
             let session = URLSession(configuration: .default)

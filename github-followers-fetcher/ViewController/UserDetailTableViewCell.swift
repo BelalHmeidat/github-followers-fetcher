@@ -52,9 +52,17 @@ class UserImageTableViewCell: UITableViewCell {
     }
     
     func setup(configure: UserImageTableUIModel){
-        NetworkManager.shared.getUserAvatar(imageUrl: configure.avatarURL) {
-            profileImage in self.userImageView.image = profileImage
-        }
+        let imageURL = configure.avatarURL
+        FollowersAPI.getUserAvatarData(imageURL: imageURL, completion: { [weak self] imageData, errorMessage in
+            DispatchQueue.main.async {
+                if let imageData = imageData {
+                    self?.userImageView.image = UIImage(data: imageData)
+                }
+                else {
+                    self?.userImageView.image = UIImage(systemName: "person")
+                }
+            }
+        })
         makeRounded(imageView: userImageView)
     }
 }

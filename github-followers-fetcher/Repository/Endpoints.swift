@@ -29,7 +29,6 @@ enum Endpoints {
         var comps = URLComponents()
         comps.scheme = "https"
         comps.host = "api.github.com"
-//        comps.queryItems = self.queryItems
         comps.path = self.path
         return comps.url
     }
