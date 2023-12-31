@@ -54,26 +54,11 @@ class UserLookupViewController: UIViewController {
     
     private func sendRequest() {
         loadingIndicator.startAnimating()
-//        viewModel.findUser(username: usernameTextfield.text!) { [weak self] errorMessage in
-//            if let errorMessage = errorMessage{
-//                DispatchQueue.main.async(execute: {
-//                    self?.loadingIndicator.stopAnimating()
-//                    self?.showAlert(errorMessage)
-//                })
-//            }
-//            else {
-//                self?.presentUserProfileViewController()
-//            }
-//            DispatchQueue.main.async(execute: {
-//                self?.submitButton.isEnabled = true
-//                self?.loadingIndicator.stopAnimating()
-//            })
-//        }
-        viewModel.findUser(username: usernameTextfield.text!) { [weak self] (title, errorMessage) in
+        viewModel.findUser(username: usernameTextfield.text!) { [weak self] ( errorMessage) in
             if let errorMessage = errorMessage{
                 DispatchQueue.main.async(execute: {
                     self?.loadingIndicator.stopAnimating()
-                    self?.showAlert(title: title, error: errorMessage)
+                    self?.showAlert(title: "Error", error: errorMessage)
                 })
             }
             else {

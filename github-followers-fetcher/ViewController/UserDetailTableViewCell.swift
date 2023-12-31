@@ -24,7 +24,7 @@ class UserDetailTableViewCell: UITableViewCell {
         nameLabel.text = configure.name!
         let followersAttribute = [ NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)]
         let attributedFollowersCount = NSAttributedString(string: String(configure.followersCount!), attributes: followersAttribute)
-        var followersLabelText = NSMutableAttributedString(string: "\(configure.name!) has ")
+        let followersLabelText = NSMutableAttributedString(string: "\(configure.name!) has ")
         followersLabelText.append(attributedFollowersCount)
         followersLabelText.append(NSAttributedString(string:" followers"))
         followerCountLabel.attributedText = followersLabelText
@@ -52,9 +52,17 @@ class UserImageTableViewCell: UITableViewCell {
     }
     
     func setup(configure: UserImageTableUIModel){
-        userImageView.image = configure.profilePic
+        let imageURL = configure.avatarURL
+        FollowersAPI.getUserAvatarData(imageURL: imageURL, completion: { [weak self] imageData, errorMessage in
+            DispatchQueue.main.async {
+                if let imageData = imageData {
+                    self?.userImageView.image = UIImage(data: imageData)
+                }
+                else {
+                    self?.userImageView.image = UIImage(systemName: "person")
+                }
+            }
+        })
         makeRounded(imageView: userImageView)
     }
 }
-
-

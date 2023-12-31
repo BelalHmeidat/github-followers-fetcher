@@ -14,8 +14,8 @@
             filePath = "github-followers-fetcher/ViewController/UserLookupViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "presentUserProfileViewController()"
             landmarkType = "7">
          </BreakpointContent>

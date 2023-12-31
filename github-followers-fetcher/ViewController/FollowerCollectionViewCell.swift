@@ -22,11 +22,16 @@ class FollowerCollectionViewCell: UICollectionViewCell {
     func setup(configure: CollectionUIModel){
         followerName.text = configure.username
         let imageURL = configure.avatarURL
-        getUserAvatar(imageUrl: imageURL , completion: {
-            [weak self] image in
-            self?.followerImage.image = image
+        FollowersAPI.getUserAvatarData(imageURL: imageURL, completion: { [weak self] imageData, errorMessage in
+            DispatchQueue.main.async {
+                if let imageData = imageData {
+                    self?.followerImage.image = UIImage(data: imageData)
+                }
+                else {
+                    self?.followerImage.image = UIImage(systemName: "person")
+                }
+            }
         })
-    
     }
     
     private func makeRounded(imageView: UIImageView) {
@@ -37,9 +42,4 @@ class FollowerCollectionViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
     }
     
-    private func getUserAvatar(imageUrl: String, completion: @escaping (UIImage)->()){
-        FollowersAPI.downloadImage(url: URL(string: imageUrl)!) {image in
-            completion(image)
-        }
-    }
 }

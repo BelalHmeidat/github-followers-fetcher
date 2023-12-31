@@ -5,7 +5,6 @@
 //  Created by Belal Hmeidat on 11/23/23.
 //
 
-import UIKit
 class TableUIModel {
     
 }
@@ -23,8 +22,10 @@ class UserTableUIModel: TableUIModel {
 }
 
 class UserImageTableUIModel: TableUIModel {
-    var profilePic: UIImage?
-    init(profilePic: UIImage?) {
-        self.profilePic = profilePic
+//    var profilePic: UIImage?
+    var avatarURL: String
+    init(/*profilePic: UIImage?, */avatarURL: String) {
+//        self.profilePic = profilePic
+        self.avatarURL = avatarURL
     }
 }
