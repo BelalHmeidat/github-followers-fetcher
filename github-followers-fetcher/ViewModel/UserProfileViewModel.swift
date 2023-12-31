@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 class UserProfileViewModel {
     var followersList: [User] = []
