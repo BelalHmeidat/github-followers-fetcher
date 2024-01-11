@@ -6,17 +6,16 @@ class FollowersAPI {
     
     static func getUserAvatarData(imageURL: String, completion: @escaping (_ imageData: Data?, _ errorMessage: String?) -> ()) {
         NetworkingManager.shared.getImage(url: imageURL) { data, error  in
-                guard let data = data, error == nil else {
-                    completion(nil, error)
-                    return
-                }
-                completion(data, nil)
+            guard let data = data, error == nil else {
+                completion(nil, error)
+                return
             }
+            completion(data, nil)
         }
+    }
     
     static func fetchUserProfile(username: String, completion: @escaping (User?, String?)->()){
-        let url = Endpoints.getUser(user: username).url!
-        NetworkingManager.shared.excuteRequest(url: url, type: "User") {
+        NetworkingManager.shared.excuteRequest(routerCase: FollowersRouter.getUser(user: username)) {
             (response: User?, errorMessage) in
             if let errorMessage = errorMessage {
                 completion(nil, errorMessage)
@@ -33,8 +32,7 @@ class FollowersAPI {
     }
     
     static func fetchFollower(username: String, completion: @escaping ([User]?, String?)->()){
-        let url = Endpoints.getFollowerList(user: username).url!
-        NetworkingManager.shared.excuteRequest(url: url, type: "Follower") {
+        NetworkingManager.shared.excuteRequest(routerCase: FollowersRouter.getFollowerList(user: username)) {
             (response: [User]?, error) in
             if let errorMessage = error {
                 completion(nil, errorMessage)

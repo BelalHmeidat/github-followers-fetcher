@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import Alamofire
 
     
-enum Endpoints {
+enum FollowersRouter: URLRequestConvertible {
     case getUser(user: String = "")
     case getFollowerList(user: String = "")
+    
+    static private var baseURL = "https://api.github.com"
     
     private var path: String {
         switch self {
@@ -25,13 +28,9 @@ enum Endpoints {
            }
        }
     
-    var url: URL? {
-        var comps = URLComponents()
-        comps.scheme = "https"
-        comps.host = "api.github.com"
-        comps.path = self.path
-        return comps.url
-    }
+//    var baseURL: URL {
+//        return URL(string: "https://api.github.com")
+//    }
     
     private var httpMethod: String {
         switch self {
@@ -40,11 +39,11 @@ enum Endpoints {
         }
     }
     
-//    var request: URLRequest? {
-//        guard let url = self.url else { return nil }
-//        print(url)
-//        var request = URLRequest(url: url)
-//        request.httpMethod = self.httpMethod
-//        return request
-//    }
+    func asURLRequest() throws ->  URLRequest {
+        let url = try URL(string: FollowersRouter.baseURL.asURL().appendingPathComponent(path).absoluteString.removingPercentEncoding!)
+        var request = URLRequest.init(url: url!)
+        request.httpMethod = httpMethod
+//        request.timeoutInterval = TimeInterval(10*1000)
+        return try URLEncoding.default.encode(request, with: nil)
+    }
 }

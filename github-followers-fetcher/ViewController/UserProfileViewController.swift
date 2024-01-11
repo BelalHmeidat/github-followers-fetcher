@@ -18,6 +18,11 @@ class UserProfileViewController: UIViewController {
     //MARK: Initializng
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Profile"
+//        self.navigationItem.backButtonTitle = ""
+//        self.navigationController?.navigationBar.navigation.title = ""
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(closeButtonAction))
+        self.navigationController?.navigationBar.tintColor = .black
         loadingIndicator.hidesWhenStopped = true
     }
     
@@ -56,8 +61,8 @@ class UserProfileViewController: UIViewController {
     @IBAction func closeButtonAction(_ sender: UIBarButtonItem) {
         print("click")
 //        self.navigationController?.dismiss(animated: true)
-        self.navigationController?.popViewController(animated: true)
-//        self.dismiss(animated: true, completion: nil)
+//        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
 
     }
     

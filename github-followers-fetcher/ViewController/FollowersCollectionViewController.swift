@@ -22,7 +22,8 @@ class FollowersCollectionViewController: UIViewController {
         self.title = "Followers"
 //        self.navigationItem.backButtonTitle = ""
 //        self.navigationController?.navigationBar.navigation.title = ""
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+//        self.navigationItem.backBarButtonItem.customMirror.displayStyle =
         self.navigationController?.navigationBar.tintColor = .black
         viewModel?.filteredFollowerCells = viewModel!.followerCells /// initizlizes the followers list to be viewed
     }

@@ -20,5 +20,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41B4EE78-EFB7-45C3-A0D5-DFADFCBD9847"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "github-followers-fetcher/ViewController/UserProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "closeButtonAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BD94AB1-728E-4AA6-80A7-3DFC0753DC2C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "github-followers-fetcher/ViewController/UserProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "closeButtonAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5BD94AB1-728E-4AA6-80A7-3DFC0753DC2C - 8a13bb03083720eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "github_followers_fetcher.UserProfileViewController.getFollowersButtonPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "github-followers-fetcher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewController/UserProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "5BD94AB1-728E-4AA6-80A7-3DFC0753DC2C - 7c699c67426aa666"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "github_followers_fetcher.UserProfileViewController.closeButtonAction(__C.UIBarButtonItem) -&gt; ()"
+                  moduleName = "github-followers-fetcher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belal/Projects/Swift/github-followers-fetcher/github-followers-fetcher/ViewController/UserProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "228">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
